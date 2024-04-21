@@ -1,0 +1,30 @@
+{
+    "name": "costumer-manager",
+    "version": "1.0.0",
+    "description": "",
+    "main": "./dist/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "prepare": "husky",
+        "start": "node --env-file config.env ./dist/index.js",
+        "dev": "node --env-file dev-config.env --import tsx --watch src/index.ts"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/express": "^4.17.21",
+        "@types/node": "^20.12.7",
+        "husky": "^9.0.11",
+        "lint-staged": "^15.2.2",
+        "prettier": "3.2.5",
+        "tsx": "^4.7.2",
+        "typescript": "^5.4.5"
+    },
+    "lint-staged": {
+        "**/*": "prettier --write --ignore-unknown"
+    },
+    "dependencies": {
+        "express": "^4.19.2"
+    }
+}
