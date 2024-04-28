@@ -7,7 +7,8 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "prepare": "husky",
         "start": "node --env-file config.env ./dist/index.js",
-        "dev": "node --env-file dev-config.env --import tsx --watch src/index.ts"
+        "dev": "node --env-file dev-config.env --import tsx --watch src/index.ts",
+        "generate": "drizzle-kit generate:pg"
     },
     "keywords": [],
     "author": "",
@@ -15,6 +16,8 @@
     "devDependencies": {
         "@types/express": "^4.17.21",
         "@types/node": "^20.12.7",
+        "@types/pg": "^8.11.5",
+        "drizzle-kit": "^0.20.17",
         "husky": "^9.0.11",
         "lint-staged": "^15.2.2",
         "prettier": "3.2.5",
@@ -25,6 +28,8 @@
         "**/*": "prettier --write --ignore-unknown"
     },
     "dependencies": {
-        "express": "^4.19.2"
+        "drizzle-orm": "^0.30.9",
+        "express": "^4.19.2",
+        "pg": "^8.11.5"
     }
 }
